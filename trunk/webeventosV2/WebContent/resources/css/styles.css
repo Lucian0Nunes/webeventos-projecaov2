@@ -1,0 +1,462 @@
+{
+border: 0;
+margin: 0;
+}
+
+img{
+border: 0px;
+}
+
+body{
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(#{resource['images/bg.png']});
+	line-height: 18px;
+}
+
+#bg { background: url(#{resource['images/bg.png']}) ;}
+
+#bg_top_bg { background: url(#{resource['images/bg_top_bg.png']}) top repeat-x;}
+
+#bg_top { background: url(#{resource['images/bg_top.png']}) center top no-repeat;}
+
+	
+#main {
+	width: 960px;
+	margin: 0px auto;
+}
+
+#header { 
+	width:1000px;
+	height: 70px;
+	
+}
+
+#logo {	
+	
+float: left;
+}
+
+#logo H2 {
+
+		font-family: Arial, Helvetica, sans-serif;
+		color:#dddddd;
+		font-size:18px;
+		font-style:italic;
+		background: no-repeat;
+		}
+
+#logo a {
+	text-decoration: none;
+	font-style: italic;
+	font-size: 14px;
+	color: #dddddd;
+}
+	
+#logo H2 a{
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:100;
+	text-align:left;
+}
+
+#buttons{
+	text-align:center;
+	height: 40px;
+	padding-left: 0px;
+	padding: 10px 0px 0px 580px;
+}
+
+#buttons a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: 100;
+	display: block;
+	float: left;
+	color: #000000;
+	padding-left:5px;
+	text-align: center;
+	padding-top: 2px;
+	
+}
+#buttons label {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	font-weight: 100;
+	display: block;
+	float: left;
+	padding-right:10px;
+	padding-left:5px;
+	text-align: center;
+	padding-top: 2px;
+	height: 50px;
+	
+}
+#buttons input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	float: left;
+	font-size: 14px;
+	
+	font-weight: 100;
+	display: block;
+}
+
+.but {
+	width: 140px;
+}
+
+#buttons .but:hover {
+	background: url(#{resource['images/but_hover.png']}) center center no-repeat;
+	color:#000000;
+	}
+	
+.but_t {background: url(#{resource['images/but_hover.gif']}) center bottom no-repeat;}
+
+
+	
+.top { height:335px;
+		width: 960px;
+		background: 15px no-repeat #312f54;
+		margin-top: -10px;}
+
+		
+.circl_all {
+		height: 58px; 
+		vertical-align:top;
+		padding: 27px 0px 0px 113px;
+		background: url(#{resource['images/circl_all.png']}) 113px 27px no-repeat; }
+
+.circl {
+	height: 21px;
+	width: 21px;
+	margin: 0px 102px 0px 0px;
+	float: left;
+	display:block;
+}
+.circl:hover {
+	background: url(#{resource['images/circl_hover.png']}) left top no-repeat;
+}
+
+.home_box {
+	float: left;
+	width: 480px;
+	padding: 15px 15px 0px 0px;
+	}
+	
+#left{
+	width: 640px;
+	float: left;
+	margin-left: 0px;
+}
+
+
+#left_h{
+	width: 590px;
+	float: left;
+	margin-left: 0px;
+}
+
+.text{
+	padding: 0px 0px 15px 0px;
+}
+
+.img_l {	float:left;
+		margin: 5px 22px 3px 0px;
+}
+
+.img_r {	float: right;
+		margin: 9px 10px 3px 10px;
+}
+
+
+ h1{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight: 100;
+	color: #000000;
+	text-align: left;
+	padding: 0px 0px 0px 0px;
+	line-height:normal;
+}
+
+.read {
+	font-size:12px;
+	color: #FF0000;
+	text-decoration: none;
+	display:block;
+	line-height: 17px;
+	width: 66px;
+	text-align: center;
+	float: right;
+	font-weight:bold;
+	font-style: italic;
+	
+}
+
+.read:hover {
+	font-size:12px;
+	text-decoration: underline;
+}
+
+.box_more {
+	background:url(#{resource['images/box_more.png']}) left top no-repeat;
+	height:	111px;
+	padding: 0px 15px 0px 15px;
+
+	}
+.box_more_l { float:left;
+				width: 780px;
+				padding-top: 15px;
+				color: #000000;
+				font-size: 18px;
+				line-height: 25px;
+				}
+				
+.box_more_r { float: right;
+				width: 155px;
+				padding-top: 30px;
+				}
+.but_more {
+	width: 156px;
+	height: 30px;
+	padding-top: 13px;
+	background: url(#{resource['images/box_more.png']}) left top no-repeat;
+	display:block;
+	font-size:18px;
+	color:#FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	}
+	
+.but_more:hover {
+	
+	background: url(#{resource['images/box_more_hov.gif']}) left top no-repeat;}
+
+
+	
+#bottom {
+	background: url(#{resource['images/bottom.png']}) 43px 30px no-repeat;
+	color: #FFFFFF;
+}
+
+#bottom_bot {
+	background: url(#{resource['images/bottom_bot.png']}) 43px bottom no-repeat;
+	color: #FFFFFF;
+}
+
+#bottom h1 { 
+	color: #312f54;
+	font-size: 14px;
+	font-weight: 100;
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+			}
+
+#b_col1 {
+	width: 250px;
+	float: left;
+	margin-left: 43px;
+}
+#b_col2 {
+	width: 250px;
+	float: left;
+	margin-left: 85px;
+}
+#b_col3 {
+	width: 250px;
+	float: left;
+	margin-left: 80px;
+	text-align: left;
+}
+
+
+.box_us {
+width: 244px;
+}
+
+.box_us_l {
+width: 27px;
+float: left;
+padding-top:3px;
+}
+
+.box_us_r {
+width: 217px;
+float: left;
+color: #312f54;
+}
+
+
+.spis_bot {
+	list-style:none;
+	padding: 0px 0px 0px 34px;}
+
+.spis_bot li {
+	padding: 7px 0px 0px 18px;
+	background: url(#{resource['images/fish2.gif']}) 0px 12px no-repeat;
+	}
+	
+.spis_bot a {
+	color:#312f54;
+	text-decoration:none;
+	font-weight: 100;
+	display: block;
+	font-weight:bold;}
+.spis_bot a:hover {
+	text-decoration: underline;
+	}
+	
+.fu_i {
+	padding: 0px 14px 0px 0px;
+	vertical-align: middle ;
+}
+
+#b_col3 ul {
+	list-style:none;
+	padding: 0px 0px 0px 52px;}
+
+#b_col3 li {
+	padding: 8px 0px 2px 0px;
+	background: none;
+	}
+	
+#b_col3 li a {
+	color:#312f54;
+	text-decoration: none;
+	font-weight: bold;}
+	
+#b_col3 li a:hover {
+	text-decoration: underline;
+}
+
+#footer{
+	height: 75px;
+	font-size: 11px;
+	color: #312f54;
+	text-align: center;
+	padding: 30px 0px 0px 0px;
+	background: url(#{resource['images/footer.jpg']}) 0px 15px no-repeat;
+}
+
+#footer a{
+	color: #312f54;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+#footer a:hover{
+	color: #312f54;
+	font-size: 11px;
+	text-decoration: underline;
+}
+
+.lh {
+	line-height: 22px;
+}
+
+
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+
+
+#slider-wrapper {
+    width: 900px;
+    height: 300px;
+    margin:0 auto;
+	padding-top: 15px;
+}
+
+#slider {
+	position:relative;
+    width: 900px;
+    height: 300px;
+	background:url(#{resource['images/loading.gif']}) no-repeat 50% 50%;
+}
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#slider a {
+	border:0;
+	display:block;
+}
+
+.nivo-controlNav {
+	position:absolute;
+	left: 400px;
+	bottom:-52px;
+
+}
+.nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(#{resource['images/circl.png']}) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+		background:url(#{resource['images/circl_hover.png']}) no-repeat;
+}
+
+.nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(#{resource['images/arrows.png']})) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+a.nivo-prevNav {
+	left:15px;
+}
+
+.nivo-caption {
+    text-shadow:none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.nivo-caption a { 
+    color:#efe9d1;
+    text-decoration:underline;
+}
+
+.tabela {
+     border: 4px solid transparent;
+     
+}
+.cabecalho {
+   text-align: center;
+   font: 14px Arial, sans-serif;
+   font-weight: bold;
+   color: Snow;
+   background:  #312f54;
+}
+.primeiro {
+
+   width: 150px;
+   height: 30px;
+   font: 11px Arial, sans-serif;
+   text-align: center;
+   background: #b3afb8;
+}
+.ultimo {
+   width: 250px;
+   height: 30px;
+   font: 11px Arial, sans-serif;
+   text-align: center;
+   background: #b3afb8;
+}
