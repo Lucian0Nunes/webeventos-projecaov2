@@ -1,0 +1,29 @@
+<ui:composition template="/WEB-INF/template/principal.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="login">
+		<h:form>
+			<h:outputLabel value="Login:" for="login" />
+			<h:inputText id="login" size="10" value="#{autenticador.usuario}" />
+			<h:outputLabel value="Senha:" for="senha" />
+			<h:inputSecret id="senha" size="10" value="#{autenticador.senha}" />
+
+			<h:commandButton value="Entrar" action="#{autenticador.autentica}" />
+			<h:outputLabel value="|" for="senha" />
+			<h:link value="Instreva-se!!" outcome="cadastro" />
+		</h:form>
+
+
+	</ui:define>
+
+
+	<ui:define name="conteudo">
+		<h:form>
+
+			<ui:include src="/WEB-INF/fragmentos/lista-eventos.xhtml" />
+		</h:form>
+	</ui:define>
+</ui:composition>
