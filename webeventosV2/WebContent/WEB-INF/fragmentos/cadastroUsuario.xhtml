@@ -1,0 +1,22 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<fieldset>
+			<h:panelGrid columns="3">
+				<h:outputLabel value="Nome:" for="nome" />
+				<h:inputText id="nome" value="#{usuarioBean.usuario.nome}" size="30"
+					required="true" requiredMessage="Campo Obrigatorio" />
+				<h:message for="nome" />
+
+				<h:outputLabel value="Email :" for="email" />
+				<h:inputText id="email" value="#{usuarioBean.usuario.email}"
+					size="30" required="true" requiredMessage="Campo Obrigatorio" />
+				<h:message for="email" />
+
+				<h:commandButton value="Salvar">
+					<f:ajax event="click" execute="@form" listener="#{usuarioBean.adiciona}" render="@all" />
+				</h:commandButton>
+			</h:panelGrid>
+	</fieldset>
+</ui:composition>

@@ -1,0 +1,32 @@
+<ui:composition
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:panelGroup >
+		<h:dataTable id="tabela" value="#{oficina.lista}"  var="of" styleClass="tabela"  headerClass="cabecalho" columnClasses="ultimo,primeiro,primeiro">
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Palestra" />
+				</f:facet>
+				 <h:outputText value="#{of.descricao}" />
+ 			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Dia" />
+				</f:facet>
+				<h:outputText value="#{of.descricao}"/>
+ 			</h:column>
+ 
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Hora" />
+				</f:facet>
+				<h:outputText value="#{of.descricao}"/>
+ 			</h:column>
+ 			
+		</h:dataTable>
+	</h:panelGroup>
+</ui:composition>
