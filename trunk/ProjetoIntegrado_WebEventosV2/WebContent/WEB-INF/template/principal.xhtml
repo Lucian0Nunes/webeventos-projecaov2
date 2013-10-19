@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Web_Eventos</title>
+	<meta name="keywords" content="WebEventos" />
+	<meta name="description" content="WebEventos"/> 
+
+	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputStylesheet library="css" name="nivo-slider.css" media="screen" />
+	
+</h:head>
+<body>
+<h:graphicImage library="images" name="logo1.gif"  style="float:left; width : 220px; height : 80px; padding-left: 10px; padding-top: 10px;"/>
+<h:messages style="float:left; padding-left: 50px;font-size: 16px; color: #FF0000;"/>
+	<div id="bg">
+	<div id="buttons">
+		<ui:insert name="login">espaço para o conteudo da tela responsavel pelo login</ui:insert>
+	</div>
+		<div id="bg_top_bg">
+			<div id="bg_top">
+
+					<div id="main">
+						<!-- header begins -->
+						<div id="header">
+
+						</div>
+						<!-- header ends -->
+						<div class="top">
+							<div id="slider-wrapper">
+								<div id="slider" class="nivoSlider">
+									<h:graphicImage library="images" name="top.jpg" alt="" />
+									<h:graphicImage library="images" name="top2.jpg" alt="" />
+									<h:graphicImage library="images" name="top3.jpg" alt="" />
+								</div>
+							</div>
+
+							<h:outputScript library="js" name="jquery-1.4.3.min.js" />
+							<h:outputScript library="js" name="jquery.nivo.slider.pack.js" />
+
+							<script type="text/javascript">
+    								$(window).load(function() {
+        								$('#slider').nivoSlider({ effect:'fold' });
+    								});
+    						</script>
+
+						</div>
+
+						<div style="height: 20px"></div>
+						
+						<!-- content begins -->
+						<div class="home_box">
+							<div id="conteudo">
+								<ui:insert name="conteudo">espaço para o conteudo da tela.</ui:insert>
+							</div>
+						</div>
+						<div style="clear: both"></div>
+						
+						<!-- content ends -->
+						<div style="height: 40px"></div>
+						<!-- bottom begin -->
+						<div id="bottom_bot">
+							<div id="bottom">
+								<div id="b_col1">
+									<h1>Informações Úteis</h1>
+									<div style="height: 10px"></div>
+									<ul class="spis_bot">
+										<li><h:outputLink >bla bla bla bla...</h:outputLink></li>
+										<li><h:outputLink >bla bla bla bla...</h:outputLink></li>
+										<li><h:outputLink >bla bla bla bla...</h:outputLink></li>
+										<li><h:outputLink >bla bla bla bla...</h:outputLink></li>
+									</ul>
+								</div>
+								<div id="b_col2">
+									<h1>Contato</h1>
+									<div style="height: 20px"></div>
+									<div style="padding-left: 10px">
+										<div class="box_us">
+											<div class="box_us_l">
+												<h:graphicImage library="images" name="fish_us1.png" alt="" />
+											</div>
+											<div class="box_us_r">
+												<b class="lh">Area Especial 10, Lote C, Guará II</b>
+											</div>
+											<div style="clear: both; height: 10px;"></div>
+										</div>
+										<div class="box_us">
+											<div class="box_us_l">
+												<h:graphicImage library="images" name="fish_us2.png" alt="" />
+											</div>
+											<div class="box_us_r">
+												<b class="lh">Tel: (61)3038-6500
+												</b>
+											</div>
+											<div style="clear: both; height: 10px;"></div>
+										</div>
+										<div class="box_us">
+											<div class="box_us_l">
+												<h:graphicImage library="images" name="fish_us3.png" alt="" />
+											</div>
+											<div class="box_us_r">
+												<b class="lh">E-mail: tads4semestre@gmail.com</b>
+											</div>
+											<div style="clear: both; height: 10px;"></div>
+										</div>
+									</div>
+								</div>
+
+								<div id="b_col3">
+									<h1>Social</h1>
+									<ul>
+										<li><h:graphicImage library="images" name="facebook.png" alt="" class=" fu_i" /><a href="https://www.facebook.com/FaculdadeProjecao">Facebook</a></li>
+										<li><h:graphicImage library="images" name="youtube.png" alt="" class=" fu_i" /><a href="https://www.youtube.com/user/grupoprojecao1">You Tube</a></li>
+										<li><h:graphicImage library="images" name="twitter.png" alt="" class=" fu_i" /><a href="http://twitter.com/grupoprojecao">Twitter</a></li>
+										<li><h:graphicImage library="images" name="linkedin.png" alt="" class=" fu_i" /><a href="http://www.linkedin.com/company/936268?trk=company_search">Linkedin</a></li>
+									</ul>
+
+								</div>
+								<div style="clear: both; height: 20px;"></div>
+							</div>
+						</div>
+						<!-- bottom end -->
+						<div id="footer">
+							Copyright 2013. Criado pela <a href="#" title="Web_Eventos">turma do 4° Semestre - TADS</a>, codificado por: <a href="#"
+								title="Web_Eventos">JavaDroid</a>
+							<!-- end -->
+							
+							<br /> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

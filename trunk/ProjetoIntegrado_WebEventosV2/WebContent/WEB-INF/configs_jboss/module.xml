@@ -1,0 +1,15 @@
+<!-- este arquivo determina o websource, deve ser copiado para o jboos na pasta: jboss7.1.1\modules\com\mysql\main 
+la deve conter também o jar do connector do banco-->
+<!-- 
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.0" name="com.mysql">
+  <resources>
+    <resource-root path="mysql-connector-java-5.1.25-bin.jar"/>
+  </resources>
+  <dependencies>
+    <module name="javax.api"/>
+    <module name="javax.transaction.api"/>
+    <module name="javax.servlet.api" optional="true"/>
+  </dependencies>
+</module>
+ -->
