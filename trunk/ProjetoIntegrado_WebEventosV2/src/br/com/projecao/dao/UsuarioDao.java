@@ -57,6 +57,7 @@ public class UsuarioDao {
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void enviaEmailConfirmacao(){
 		Query query = this.manager.createQuery("SELECT x FROM Usuario x where x.cadastroReserva = false ");
 		List<Usuario> listaConfirmacao = query.getResultList();
@@ -67,6 +68,7 @@ public class UsuarioDao {
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void enviaEmailComQRCode(){
 		Query query = this.manager.createQuery("SELECT x FROM Usuario x where x.confirmado = true");
 		List<Usuario> listaReserva = query.getResultList();
