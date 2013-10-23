@@ -15,7 +15,7 @@ public class UsuarioFacade {
 	private UsuarioDao usuarioDao;
 	private EventoDao eventoDao;
 	private static String mensagemOK = "cadastro efetuado com sucesso";
-	private static String mensagemReserva = "vocÃª estÃ¡ na lista reserva";
+	private static String mensagemReserva = "você está na lista reserva";
 
 	public UsuarioFacade(EntityManager manager) {
 		usuarioDao = new UsuarioDao(manager);
