@@ -16,7 +16,7 @@ import br.com.projecao.facade.UsuarioFacade;
 @ManagedBean(name = "usuarioBean")
 @SessionScoped
 public class CadastroUsuarioMB {
-	private Usuario usuario;
+	private Usuario usuario = new Usuario();
 	private List<Usuario> lista;
 
 	public void adiciona() {
@@ -32,7 +32,8 @@ public class CadastroUsuarioMB {
 	}
 
 	public void preparaAlteracao() {
-		Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+		Map<String, String> params = FacesContext.getCurrentInstance()
+				.getExternalContext().getRequestParameterMap();
 		Long id = Long.parseLong(params.get("id"));
 		EntityManager manager = this.getManager();
 		UsuarioFacade dao = new UsuarioFacade(manager);
@@ -41,7 +42,8 @@ public class CadastroUsuarioMB {
 	}
 
 	public void remove() {
-		Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+		Map<String, String> params = FacesContext.getCurrentInstance()
+				.getExternalContext().getRequestParameterMap();
 		Long id = Long.parseLong(params.get("id"));
 		EntityManager manager = this.getManager();
 		UsuarioFacade dao = new UsuarioFacade(manager);

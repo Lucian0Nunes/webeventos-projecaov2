@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -16,44 +14,43 @@ import javax.persistence.TemporalType;
 import br.com.projecao.interfaces.InterfaceDeAcessoAoBanco;
 
 /**
- * Classe que vai controlar os usuarios cadastrados no sistema. 
- *  
+ * Classe que vai controlar os usuarios cadastrados no sistema.
+ * 
  * @author javadroid
- *
+ * 
  */
 
 @Entity
-@Table(name="Usuario")
-public class Usuario implements InterfaceDeAcessoAoBanco{
-
+@Table(name = "Usuario")
+public class Usuario implements InterfaceDeAcessoAoBanco {
 
 	private static final long serialVersionUID = 5009358024016271178L;
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name="nome")
+	@Column(name = "nome")
 	private String nome;
-	@Column(name="email", unique=true)
+	@Column(name = "email", unique = true)
 	private String email;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar data_cadastro;
-	@Column(name="cadastro_reserva")
+	@Column(name = "cadastro_reserva")
 	private boolean cadastroReserva;
-	@Column(name="confirmado")
+	@Column(name = "confirmado")
 	private boolean confirmado;
-	@Column(name="cadastroPreliminar")
+	@Column(name = "cadastroPreliminar")
 	private boolean cadastroPreliminar;
-	@Column(name="cpf")
+	@Column(name = "cpf")
 	private String cpf;
-	
+
 	private int nivelAcesso;
-	
-	@Column(name="login")
+
+	@Column(name = "login")
 	private String login;
-	@Column(name="senha")
-	private String senha;	
-		
+	@Column(name = "senha")
+	private String senha;
+
 	@Override
 	public void setId(Long id) {
 		this.id = id;
@@ -168,8 +165,5 @@ public class Usuario implements InterfaceDeAcessoAoBanco{
 			return false;
 		return true;
 	}
-
-	
-	
 
 }
