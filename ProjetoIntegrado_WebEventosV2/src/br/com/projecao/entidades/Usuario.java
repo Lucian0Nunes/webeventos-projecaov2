@@ -31,6 +31,8 @@ public class Usuario implements InterfaceDeAcessoAoBanco {
 	private Long id;
 	@Column(name = "nome")
 	private String nome;
+	@Column(name = "sobrenome")
+	private String sobrenome;
 	@Column(name = "email", unique = true)
 	private String email;
 	@Temporal(TemporalType.TIMESTAMP)
@@ -43,6 +45,10 @@ public class Usuario implements InterfaceDeAcessoAoBanco {
 	private boolean cadastroPreliminar;
 	@Column(name = "cpf")
 	private String cpf;
+	@Column(name = "telefone")
+	private String telefone;
+	@Column(name = "instituicao")
+	private String instituicao;
 
 	private int nivelAcesso;
 
@@ -67,6 +73,14 @@ public class Usuario implements InterfaceDeAcessoAoBanco {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getSobrenome() {
+		return sobrenome;
+	}
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
 	}
 
 	public String getEmail() {
@@ -131,6 +145,22 @@ public class Usuario implements InterfaceDeAcessoAoBanco {
 
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getInstituicao() {
+		return instituicao;
+	}
+
+	public void setInstituicao(String instituicao) {
+		this.instituicao = instituicao;
 	}
 
 	public int getNivelAcesso() {
