@@ -83,5 +83,8 @@ public class CadastroUsuarioMB {
 	public void setLista(List<Usuario> lista) {
 		this.lista = lista;
 	}
+	public String alterarDados(){
+		return "/cadastro";
+	}
 
 }
