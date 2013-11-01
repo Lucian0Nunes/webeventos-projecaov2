@@ -26,6 +26,9 @@ public class EventoFacade {
 	public void remove(Long id){
 		dao.remove(id);
 	}
+	public Evento atualiza(Evento evento){
+		return dao.atualiza(evento);
+	}
 	
 	public List<Evento> getLista(){
 		return dao.getLista();

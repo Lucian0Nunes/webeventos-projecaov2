@@ -1,6 +1,7 @@
 package br.com.projecao.entidades;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -38,9 +39,9 @@ public class Evento implements InterfaceDeAcessoAoBanco{
 	@Column(name="desc_evento")
 	private String descricaoEvento;
 	@Temporal(TemporalType.TIMESTAMP)
-	private Calendar data_inicio;
+	private Calendar data_inicio = new GregorianCalendar();
 	@Temporal(TemporalType.TIMESTAMP)
-	private Calendar data_termino;
+	private Calendar data_termino = new GregorianCalendar();;
 	@Column(name="qtd_vagas")
 	private int qtd_vagas;
 	@Column(name="dias_float")

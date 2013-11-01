@@ -52,7 +52,7 @@ public class JavaMailApp {
 					Address[] toUser = InternetAddress.parse(usuario.getEmail());
 
 					message.setRecipients(Message.RecipientType.TO, toUser);
-					message.setSubject("WebEventos - ProjeÃ§Ã£o (Beta)");// Assunto
+					message.setSubject("WebEventos - Projeção (Beta)");// Assunto
 
 					if (localArquivo != null) {
 						
@@ -60,7 +60,7 @@ public class JavaMailApp {
 					    MimeBodyPart messageBodyPart = new MimeBodyPart();
 
 					    //fill message
-					    messageBodyPart.setText("LeÃªm seus QrCode para verificar se foram certos.!!");
+					    messageBodyPart.setText("Olhem seus QrCode para verificar se foram certos.!!");
 
 					    Multipart multipart = new MimeMultipart();
 					    multipart.addBodyPart(messageBodyPart);
