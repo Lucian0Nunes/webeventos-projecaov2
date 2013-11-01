@@ -1,0 +1,22 @@
+<ui:composition template="/WEB-INF/template/principal.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="login">
+		<h:outputFormat value="Seja bem vindo {0}">
+			<f:param value="#{autenticador.user.nome}" />
+		</h:outputFormat>
+	</ui:define>
+
+	<ui:define name="conteudo">
+		<h:form>
+			<ui:include src="/WEB-INF/fragmentos/cadastrarOficinas.xhtml" />
+		</h:form>
+		<h:form>
+			<ui:include src="/WEB-INF/fragmentos/cadastrarEvento.xhtml" />
+		</h:form>
+	</ui:define>
+</ui:composition>

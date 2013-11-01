@@ -4,16 +4,11 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-	<ui:define name="login">
-		<h:form>
-			<h:outputFormat value="Seja bem vindo {0}">
-				<f:param value="#{autenticador.user.nome}" />
-			</h:outputFormat>
-		</h:form>
-	</ui:define>
 	<ui:define name="conteudo">
-		<h:form>
-			<ui:include src="/WEB-INF/fragmentos/lista-eventos.xhtml" />
-		</h:form>
+		<h1>Inscrição realizada com sucesso!</h1>
+		<h:panelGrid columns="2" style="text-align: center">
+			<p>Para saber mais sobre o evento</p>
+			<h:link value="clique aqui" outcome="login" />
+		</h:panelGrid>
 	</ui:define>
 </ui:composition>

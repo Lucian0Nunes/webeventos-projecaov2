@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<p:panel header="Cadastrar oficinas" style="text-align:center">
+		<h:panelGrid columns="3" style="text-align:left">
+			<h:outputLabel value="Descrição: " for="desc" />
+			<h:inputTextarea id="desc" value="#{oficinaBean.oficina.descricao}"
+				required="true" requiredMessage="Campo Obrigatorio" rows="7"
+				cols="130" />
+			<h:message for="desc" />
+
+			<h:outputText value="Data e Horário: " for="data" />
+			<h:inputText value="#{oficinaBean.oficina.horario.time}" id="data"
+				required="true">
+				<f:convertDateTime dateStyle="short" type="date"
+					pattern="dd/MM/yyyy HH:mm" />
+			</h:inputText>
+			<h:message for="data" />
+		</h:panelGrid>
+		<center>
+			<h:commandButton value="Cadastrar">
+				<f:ajax event="click" execute="@form"
+					listener="#{oficinaBean.adiciona()}" render="@form" />
+			</h:commandButton>
+			<h:commandButton value="Cancelar" type="reset" />
+		</center>
+	</p:panel>
+</ui:composition>

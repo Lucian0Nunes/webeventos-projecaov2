@@ -5,59 +5,52 @@
 	xmlns:p="http://primefaces.org/ui">
 
 	<p:panel header="Preencha os dados Abaixo" style="text-align:center">
+		<h:form>
+			<h:panelGrid columns="3" style="text-align:left">
+				<h:outputLabel value="Nome:" for="nome" />
+				<h:inputText id="nome" value="#{usuarioBean.usuario.nome}" size="30"
+					required="true" requiredMessage="Campo Obrigatorio" />
+				<h:message for="nome" />
 
-		<!-- 	linha problemática -->
-		<!-- 		<h:inputHidden value="#{usuarioBean.usuario.id}" /> -->
+				<h:outputLabel value="Sobrenome: " for="sobrenome" />
+				<h:inputText id="sobrenome" value="#{usuarioBean.usuario.sobrenome}"
+					size="60" required="true" requiredMessage="Campo obrigatorio" />
+				<h:message for="sobrenome" />
 
-		<h:panelGrid columns="3" style="text-align:left">
-			<h:outputLabel value="Nome:" for="nome" />
-			<h:inputText id="nome" value="#{usuarioBean.usuario.nome}" size="30"
-				required="true" requiredMessage="Campo Obrigatorio" />
-			<h:message for="nome" />
+				<h:outputLabel value="CPF: " for="cpf" />
+				<h:inputText id="cpf" value="#{usuarioBean.usuario.cpf}" size="25"
+					required="true" requiredMessage="Campo Obrigatorio" />
+				<h:message for="cpf" />
 
-			<h:outputLabel value="Sobrenome: " for="sobrenome" />
-			<h:inputText id="sobrenome" value="#{usuarioBean.usuario.sobrenome}"
-				size="60" required="true" requiredMessage="Campo obrigatorio" />
-			<h:message for="sobrenome" />
+				<h:outputLabel value="Telefone: " for="telefone" />
+				<h:inputText id="telefone" value="#{usuarioBean.usuario.telefone}"
+					size="25" required="true" requiredMessage="Campo Obrigatorio" />
+				<h:message for="telefone" />
 
-			<h:outputLabel value="CPF: " for="cpf" />
-			<h:inputText id="cpf" value="#{usuarioBean.usuario.cpf}" size="25"
-				required="true" requiredMessage="Campo Obrigatorio" />
-			<h:message for="cpf" />
+				<h:outputLabel value="Email:" for="email" />
+				<h:inputText id="email" value="#{usuarioBean.usuario.email}"
+					size="60" required="true" requiredMessage="Campo Obrigatorio" />
+				<h:message for="email" />
 
-			<h:outputLabel value="Telefone: " for="telefone" />
-			<h:inputText id="telefone" value="#{usuarioBean.usuario.telefone}"
-				size="25" required="true" requiredMessage="Campo Obrigatorio" />
-			<h:message for="telefone" />
+				<h:outputLabel value="Instituição" for="inst" />
+				<h:inputText id="inst" value="#{usuarioBean.usuario.instituicao}"
+					size="60" required="true" requiredMessage="Campo Obrigatorio" />
+				<h:message for="inst" />
 
-			<h:outputLabel value="Email:" for="email" />
-			<h:inputText id="email" value="#{usuarioBean.usuario.email}"
-				size="60" required="true" requiredMessage="Campo Obrigatorio" />
-			<h:message for="email" />
+				<h:outputLabel value="Login:" for="login" />
+				<h:inputText id="login" value="#{usuarioBean.usuario.login}"
+					size="25" required="true" requiredMessage="Campo Obrigatorio" />
+				<h:message for="login" />
 
-			<h:outputLabel value="Instituição" for="inst" />
-			<h:inputText id="inst" value="#{usuarioBean.usuario.instituicao}"
-				size="60" required="true" requiredMessage="Campo Obrigatorio" />
-			<h:message for="inst" />
-
-			<h:outputLabel value="Login:" for="login" />
-			<h:inputText id="login" value="#{usuarioBean.usuario.login}"
-				size="25" required="true" requiredMessage="Campo Obrigatorio" />
-			<h:message for="login" />
-
-			<h:outputLabel value="Senha:" for="senha" />
-			<h:inputSecret id="senha" value="#{usuarioBean.usuario.senha}"
-				size="25" required="true" requiredMessage="Campo Obrigatorio" />
-			<h:message for="senha" />
-		</h:panelGrid>
-		<center>
-
-			<h:commandButton value="Cadastrar">
-				<f:ajax event="click" execute="@form"
-					listener="#{usuarioBean.adiciona()}" render="@form" />
-			</h:commandButton>
-			<h:commandButton value="Cancelar" type="reset" />
-
-		</center>
+				<h:outputLabel value="Senha:" for="senha" />
+				<h:inputSecret id="senha" value="#{usuarioBean.usuario.senha}"
+					size="25" required="true" requiredMessage="Campo Obrigatorio" />
+				<h:message for="senha" />
+			</h:panelGrid>
+			<center>
+				<h:commandButton action="#{usuarioBean.adiciona()}" value="Cadastrar" type="submit"/>
+				<h:commandButton action="/webeventos" value="Cancelar" type="reset"/>
+			</center>
+		</h:form>
 	</p:panel>
 </ui:composition>

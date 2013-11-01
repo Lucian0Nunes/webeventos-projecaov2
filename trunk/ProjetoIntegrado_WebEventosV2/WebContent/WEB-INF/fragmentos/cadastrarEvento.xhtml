@@ -1,0 +1,46 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<p:panel header="Cadastrar Evento" style="text-align:center">
+			<h:panelGrid columns="3" style="text-align:left">
+				<h:outputLabel value="Nome:" for="nome" />
+				<h:inputText id="nome" value="#{evento.evento.nome}" required="true"
+					requiredMessage="Campo Obrigatorio" size="128" />
+				<h:message for="nome" />
+				<h:outputLabel value="Descrição: " for="descricao" />
+				<h:inputTextarea id="descricao"
+					value="#{evento.evento.descricaoEvento}" required="true"
+					requiredMessage="Campo Obrigatorio" rows="7" cols="130" />
+				<h:message for="descricao" />
+				<h:outputText value="Endereço: " for="endereco" />
+				<h:inputText value="#{evento.evento.endereco_evento}" id="endereco"
+					required="true" size="129" />
+				<h:message for="endereco" />
+				<h:outputText value="Data de inicio:" for="data_inicio" />
+				<h:inputText value="#{evento.evento.data_inicio.time}"
+					id="data_inicio" required="true">
+					<f:convertDateTime dateStyle="short" type="date"
+						pattern="dd/MM/yyyy" />
+				</h:inputText>
+				<h:message for="data_inicio" />
+				<h:outputText value="Data de termino: " for="data_termino" />
+				<h:inputText value="#{evento.evento.data_termino.time}"
+					id="data_termino" required="true">
+					<f:convertDateTime dateStyle="short" type="date"
+						pattern="dd/MM/yyyy" />
+				</h:inputText>
+				<h:message for="data_termino" />
+			</h:panelGrid>
+			<center>
+				<h:commandButton value="Cadastrar">
+					<f:ajax event="click" execute="@form"
+						listener="#{evento.adiciona()}" render="@form" />
+				</h:commandButton>
+				<h:commandButton value="Cancelar" type="reset" />
+			</center>
+	</p:panel>
+
+</ui:composition>

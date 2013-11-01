@@ -1,0 +1,103 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<p:panel header="Cadastrar Evento" style="text-align:center">
+		<h:form id="formulario-eventos">
+			<h:panelGrid columns="3" style="text-align:left">
+				<h:outputLabel value="Nome:" for="nome" />
+				<h:inputText id="nome" value="#{evento.evento.nome}" required="true"
+					requiredMessage="Campo Obrigatorio" size="128" />
+				<h:message for="nome" />
+				<h:outputLabel value="Descrição: " for="descricao" />
+				<h:inputTextarea id="descricao"
+					value="#{evento.evento.descricaoEvento}" required="true"
+					requiredMessage="Campo Obrigatorio" rows="7" cols="130" />
+				<h:message for="descricao" />
+				<h:outputText value="Endereço: " for="endereco" />
+				<h:inputText value="#{evento.evento.endereco_evento}" id="endereco"
+					required="true" size="129" />
+				<h:message for="endereco" />
+				<h:outputText value="Data de inicio:" for="data_inicio" />
+				<h:inputText value="#{evento.evento.data_inicio.time}"
+					id="data_inicio" required="true">
+					<f:convertDateTime dateStyle="short" type="date"
+						pattern="dd/MM/yyyy" />
+				</h:inputText>
+				<h:message for="data_inicio" />
+				<h:outputText value="Data de termino: " for="data_termino" />
+				<h:inputText value="#{evento.evento.data_termino.time}"
+					id="data_termino" required="true">
+					<f:convertDateTime dateStyle="short" type="date"
+						pattern="dd/MM/yyyy" />
+				</h:inputText>
+				<h:message for="data_termino" />
+			</h:panelGrid>
+			<center>
+				<h:commandButton value="Cadastrar">
+					<f:ajax event="click" execute="formulario-eventos"
+						listener="#{evento.adiciona()}" render="formulario-eventos" />
+				</h:commandButton>
+				<h:commandButton value="Cancelar" type="reset" />
+			</center>
+		</h:form>
+	</p:panel>
+
+
+	<p:panel header="Cadastrar oficinas" style="text-align:center">
+		<!-- 		<h:inputHidden value="#{oficinaBean.oficina.id}" /> -->
+		<h:form id="formulario-oficinas">
+			<h:panelGrid columns="3" style="text-align:left">
+				<h:outputLabel value="Descrição: " for="desc" />
+				<h:inputTextarea id="desc" value="#{oficinaBean.oficina.descricao}"
+					required="true" requiredMessage="Campo Obrigatorio" rows="7"
+					cols="130" />
+				<h:message for="desc" />
+
+				<h:outputText value="Data e Horário: " for="data" />
+				<h:inputText value="#{oficinaBean.oficina.horario.time}" id="data"
+					required="true">
+					<f:convertDateTime dateStyle="short" type="date"
+						pattern="dd/MM/yyyy HH:mm" />
+				</h:inputText>
+				<h:message for="data" />
+
+				<h:outputLabel value="Responsavel: " for="responsavel" />
+				<h:selectOneMenu value="#{oficinaBean.oficina.responsavel}"
+					id="responsavel">
+					<f:selectItems value="#{usuarioBean.usuarios}" var="resp"
+						itemValue="#{resp.nome}" itemLabel="#{resp.nome}" />
+				</h:selectOneMenu>
+
+			</h:panelGrid>
+			<center>
+				<h:commandButton value="Cadastrar">
+					<f:ajax event="click" execute="@form"
+						listener="#{oficinaBean.adiciona()}" render="@form" />
+				</h:commandButton>
+				<h:commandButton value="Cancelar" type="reset" />
+
+			</center>
+		</h:form>
+	</p:panel>
+
+	<p:panel header="Inscritos" style="text-align:center">
+		<p:dataTable id="tabela" value="#{usuarioBean.usuarios}" var="usuario"
+			title="Responsável" rows="5">
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Nome" />
+				</f:facet>
+				<h:outputText value="#{usuario.nome}" />
+			</p:column>
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Nível de acesso" />
+				</f:facet>
+				<h:outputText value="#{usuario.nivelAcesso}" />
+			</p:column>
+		</p:dataTable>
+	</p:panel>
+</ui:composition>

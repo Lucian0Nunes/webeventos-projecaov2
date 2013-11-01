@@ -19,16 +19,20 @@ public class CadastroUsuarioMB {
 	private Usuario usuario = new Usuario();
 	private List<Usuario> lista;
 
-	public void adiciona() {
+	public String adiciona() {
+		String acao;
 		EntityManager manager = this.getManager();
 		UsuarioFacade dao = new UsuarioFacade(manager);
 		if (this.usuario.getId() == null) {
 			dao.adiciona(this.usuario);
+			acao = "/sucesso.xhtml";
 		} else {
 			dao.atualiza(this.usuario);
+			acao = "/webeventos";
 		}
 		this.usuario = new Usuario();
 		this.lista = null;
+		return acao;
 	}
 
 	public void preparaAlteracao() {
@@ -82,9 +86,6 @@ public class CadastroUsuarioMB {
 
 	public void setLista(List<Usuario> lista) {
 		this.lista = lista;
-	}
-	public String alterarDados(){
-		return "/cadastro";
 	}
 
 }
