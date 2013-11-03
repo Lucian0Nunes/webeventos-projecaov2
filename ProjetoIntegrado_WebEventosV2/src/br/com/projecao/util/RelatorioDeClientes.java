@@ -45,7 +45,8 @@ public class RelatorioDeClientes {
 		JasperPrint print = JasperFillManager.fillReport(report, null,	new JRBeanCollectionDataSource(lista));
 
 		// exportacao do relatorio para outro formato, no caso PDF
-		JasperExportManager.exportReportToPdfFile(print,"relatorios/RelatorioClientes.pdf");
+//		JasperExportManager.exportReportToPdfFile(print,"WebContent/relatorio.xhtml");
+		JasperExportManager.exportReportToHtmlFile(print, "WebContent/relatorio.xhtml");
 
 		System.out.println("Relatário gerado.");
 	}
