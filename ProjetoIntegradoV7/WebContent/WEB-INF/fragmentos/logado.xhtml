@@ -1,0 +1,22 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+		<ul class="logado">
+			<li class="logado">
+			#{sessionScope.usuario}!
+			</li>
+		</ul>
+		
+		<ul class="logadoButton">
+			<li class="logadoButton">
+				<h:commandButton value="sair" styleClass="button" action="#{autenticador.registraSaida}"/>
+			</li>
+		</ul>
+
+		<h:link outcome="index">
+			<h:graphicImage library="images" name="logo_faculdade.png" alt="WebEventos Projeção" class="logo" title="WebEventos Projeção" />
+		</h:link>
+
+</ui:composition>

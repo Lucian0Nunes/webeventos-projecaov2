@@ -1,0 +1,31 @@
+<ui:composition template="../main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="conteudo_aba_superior">
+	<h:form>
+	<h:messages styleClass="message"/>
+		<ul class="cadastro" >
+			<li class="loginUsuario">
+				<h:outputLabel value="Login: " style="color: white;"/>
+				<h:inputText value="#{navegador.nome}"/>
+			</li>
+			
+			<li class="loginSenha">	
+				<h:outputLabel value="Senha: " style="color: white;" />
+				<h:inputSecret value="#{navegador.senha}"/>
+			</li>
+						
+			<li class="buttonLogin">
+				<h:commandLink value="Entrar" action="#{navegador.autentica}">
+					<f:ajax execute="@form" render="@form" />
+				</h:commandLink>					
+			</li>	
+			
+		</ul>
+	</h:form>
+
+	</ui:define>
+</ui:composition>

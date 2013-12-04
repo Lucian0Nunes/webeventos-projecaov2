@@ -1,0 +1,81 @@
+<ui:composition template="mainadm.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="conteudo_agenda">
+
+		<div id="agenda">
+			<h2>Resumo do Evento </h2>
+		</div>
+		
+		<ul class="nomeEvento">
+				<h:outputLabel value="Nome do Evento:" />
+				<h:outputText value="#{controleDeEvento.evento.nome}" />
+		</ul>
+		
+		<ul class="descEvento">
+			<h:outputLabel value="Descrição do Evento:" />
+			<h:outputText value="#{controleDeEvento.evento.descricaoEvento}" />
+		</ul>
+		<h:form>
+			<h:panelGrid columns="2" border="0"	rendered="#{empty navegador.validaLogin}">
+
+
+				<h:outputLabel value="Quantidade Total de Vagas:" />
+				<h:outputText value="#{controleDeEvento.evento.qtd_vagas}" />
+
+				<h:outputLabel value="já cadastrados:"/>
+				<h:outputText value="3"/>
+
+				<h:outputLabel value="Total de vagas disponiveis:"/>
+				<h:outputText value="10"/>
+				
+				<h:outputText value="Usuários já Confirmados:"/>
+				<h:outputText value="5"/>
+				
+				<h:outputLabel value="Usuários na lista de espera:"/>
+				<h:outputText value="5"/>
+
+				
+				<h:outputLabel value="Data Inicial do Evento:" />
+				<h:outputText value="#{controleDeEvento.evento.data_inicio_formatada}"/>
+				
+				<h:outputLabel value="Data Final do Evento:" />
+				<h:outputText value="#{controleDeEvento.evento.data_fim_formatada}"/>
+								
+				<h:outputLabel value="Dias Restantes:"/>
+				<h:outputText value="3 dias"/>
+
+
+
+				
+				<h:outputLabel value="Disparar E-mail de confirmação dias antes:"/>
+				<h:outputLabel value="#{controleDeEvento.evento.dias_float}"  />
+				
+				<h:outputLabel value="Disparar E-mail de confirmação, segunda chamada"/>
+				<h:outputLabel value="#{controleDeEvento.evento.dias_segunda_chamada}" />
+
+				<h:outputLabel value="Endereço" />
+				<h:outputText value="#{controleDeEvento.evento.endereco_evento}" />
+
+				<h:commandButton value="Alterar Dados do Evento" />
+				<h:commandButton value="Enviar E-mail de Confirmação"/>
+
+			</h:panelGrid>
+
+
+
+
+		</h:form>
+
+
+
+
+
+
+
+	</ui:define>
+
+</ui:composition>

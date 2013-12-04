@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13856028733294" configfile="/JostaV7/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="paginas/pagina2.xhtml" id="pf13858969836975" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" path="/paginas/pagina2.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page1.xhtml" id="pf13858971439897" referenceLink="//@navigationRule.0/@fromViewId|" path="page1.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" id="pf13858971439899" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" path="/page2.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pagina7.xhtml" id="pf138590131531826" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf13859864873150 pf13859864873151" path="pagina9.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="paginas/pagina7.xhtml" id="pf13859864873152" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13859864873150" path="/paginas/pagina7.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="paginas/pagina8.xhtml" id="pf13859864873153" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf13859864873151" path="/paginas/pagina8.xhtml"/>
+  <links id="pf13859864873150" target="pf13859864873152" source="pf138590131531826" outcome="logino"/>
+  <links id="pf13859864873151" target="pf13859864873153" source="pf138590131531826" outcome="logino"/>
+</pageflow:Pageflow>

@@ -1,0 +1,187 @@
+/* CSS Document */
+
+body{margin:0px; padding:0px; background:url(#{resource['images/main-bg.gif']}) 0 0 repeat-x #F2F0DC; color:#5D5B46; font:14px/18px Georgia, "Times New Roman", Times, serif;}
+div, p, ul, h2, img{margin:0px; padding:0px;}
+ul{list-style-type:none;}
+
+/*----TOP PANEL----*/
+#topPan{width:778px; height:141px; position:relative; margin:0 auto; font:14px/18px Arial, Helvetica, sans-serif;}
+#topPan ul{width:150px; height:22px; position:absolute; top:0px; right:0px;}
+#topPan ul li{float:left; width:50px; height:22px;}
+#topPan ul li a{width:45px; height:16px; display:block; background:url(#{resource['images/arrow1.gif']}) 40px 6px no-repeat; color:#fff; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none;}
+
+#topPan ul li a:hover{background:url(#{resource['images/arrow1-hover.gif']}) 40px 6px no-repeat; color:#FEF0B7; text-decoration:none;}
+
+#topPan ul li.register{float:left; width:90px; height:22px;}
+#topPan ul li.register a{width:90px; height:16px; display:block; background:url(#{resource['images/arrow1.gif']}) 85px 6px no-repeat ; color:#fff; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; padding:0 0 0 10px;}
+#topPan ul li.register input{width:100px; height:14px; color:#000; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; padding:2px 0 0 2px;}
+#topPan ul li.register a:hover{background:url(#{resource['images/arrow1-hover.gif']}) 85px 6px no-repeat ; color:#FEF0B7; text-decoration:none;}
+
+
+#topPan ul.cadastro{width:385px; height:22px; position:absolute; top:0px; right:0px;}
+
+#topPan ul li.loginSenha{float:left; width:160px; height:22px; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; padding:2px 0 0 2px}
+#topPan ul li.loginSenha input{width:100px; height:14px; color:#000; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; padding:0 0 0 2px;}
+
+#topPan ul li.loginUsuario{float:left; width:160px; height:22px; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; padding:2px 0 0 2px;}
+#topPan ul li.loginUsuario input{width:100px; height:14px; color:#000; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; padding:0 0 0 2px;}
+
+#topPan ul li.buttonLogin{float:right; width:55px; height:22px; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; }
+#topPan ul li.buttonLogin a{padding:1px 0 0 0px; }
+
+
+#topPan ul.logado{ width:300px; color:#fff; height:22px; position:absolute; top:0px; right:0px;}
+#topPan ul.logado li{ width:230px; height:22px; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; text-align: right}
+
+#topPan ul li.buttonlogado{float:right; width:55px; height:22px; font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none; }
+#topPan ul li.buttonlogado a{padding:1px 0 0 0px; }
+
+
+
+#topPan img.logo{width:281px; height:65px; position:absolute; top:53px; left:29px; border:0}
+#topPan ul.message{width:400px; height:20px; position:absolute; top:2px; left:0px; border:0 ;font:13px/16px Arial, Helvetica, sans-serif; text-decoration:none;font-weight: bold; color:white;font-style: oblique; background:url(#{resource['images/arrow1.gif']}) 235px 6px no-repeat;}
+#topPan ul.message li{width:500px; height:20px;}
+
+
+#topPan p.callus{width:119px; height:25px; background:url(#{resource['images/callus-bg.gif']}) 0 0 no-repeat #212121; color:#fff; position:absolute; top:53px; right:115px; line-height:24px; text-align:center;}
+#topPan p.phone{width:130px; height:25px; background:#212121; color:#EAE8CD; position:absolute; top:83px; right:109px; font-size:20px; line-height:25px; text-align:center;}
+
+/*----/TOP PANEL----*/
+
+/*----HEADER- PANEL----*/
+#headerPan{width:778px; height:228px; position:relative; margin:0 auto;}
+#headerleftPan{width:46px; height:228px; float:left; background:url(#{resource['images/leftfolder.gif']}) 0 0 no-repeat;}
+/*----Header Middle Panel----*/
+#headermiddlePan{width:686px; height:228px; float:left;}
+
+/*----Menu Panel----*/
+#menuPan{width:686px; height:33px; background:url(#{resource['images/menu-bg.gif']}) 0 0 repeat-x; position:relative; margin:0 auto;}
+#menuPan ul{width:660px; height:28px; position:absolute; top:2px; left:50px;}
+#menuPan ul li{width:110px; height:28px; float:left;}
+#menuPan ul li a{width:109px; height:28px; display:block; background:#fff; color:#2F2A28; border-right:1px dashed #969260; font:13px/28px Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; text-decoration:none;}
+#menuPan ul li a:hover{width:110px; height:28px; background:#2F2A28; color:#fff; border:none; text-decoration:none;}
+
+#menuPan ul li.home{width:110px; height:28px; background:#2F2A28; color:#fff; font:13px/28px Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; border:none; text-decoration:none;}
+
+#menuPan ul li.contact a{width:110px; height:28px; display:block; background:#fff; color:#2F2A28; border:none; font:13px/28px Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; text-decoration:none;}
+#menuPan ul li.contact a:hover{width:110px; height:28px; background:#2F2A28; color:#fff; border:none; text-decoration:none;}
+
+/*----/Menu Panel----*/
+#headerbodyPan{width:686px; height:184px; position:absolute; top:42px; left:46px; background:#FEFDF1; color:#fff; border-bottom:1px solid #CDCAA3; border-top:1px solid #CDCAA3;}
+/*---- Header Red Panel----*/
+#headerleftredPan{width:688px; height:152px; color:#fff; position:absolute; top:18px; left:0px;}
+
+#headerleftredPan p{width:262px; height:74px; display:block; position:absolute; top:24px; left:190px; font-size:14px; line-height:17px;} 
+#headerleftredPan p span.largetext{font-size:18px; line-height:20px;} 
+
+
+/*----Header Middle Panel----*/
+#headerrightPan{width:46px; height:228px; float:left; background:url(#{resource['images/rightfolder.gif']}) 0 0 no-repeat;}
+/*----HEADER- PANEL----*/
+
+
+/*----- HEADER PANEL CADASTRO ------*/
+
+#headerPanCadastro{width:778px; height:290px; position:relative; margin:0 auto;}
+#headerleftPanCadastro{width:46px; height:290px; float:left; background:url(#{resource['images/leftfolder290.gif']}) 0 0 no-repeat;}
+/*----Header Middle Panel----*/
+#headermiddlePanCadastro{width:686px; height:290px; float:left;}
+
+/*----Menu Panel----*/
+#menuPanCadastro{width:686px; height:33px; background:url(#{resource['images/menu-bg.gif']}) 0 0 repeat-x; position:relative; margin:0 auto;}
+#menuPanCadastro ul{width:660px; height:28px; position:absolute; top:2px; left:50px;}
+#menuPanCadastro ul li{width:110px; height:28px; float:left;}
+#menuPanCadastro ul li a{width:109px; height:28px; display:block; background:#fff; color:#2F2A28; border-right:1px dashed #969260; font:13px/28px Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; text-decoration:none;}
+#menuPanCadastro ul li a:hover{width:110px; height:28px; background:#2F2A28; color:#fff; border:none; text-decoration:none;}
+
+#menuPanCadastro ul li.home{width:110px; height:28px; background:#2F2A28; color:#fff; font:13px/28px Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; border:none; text-decoration:none;}
+
+#menuPanCadastro ul li.contact a{width:110px; height:28px; display:block; background:#fff; color:#2F2A28; border:none; font:13px/28px Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; text-decoration:none;}
+#menuPanCadastro ul li.contact a:hover{width:110px; height:28px; background:#2F2A28; color:#fff; border:none; text-decoration:none;}
+
+/*----/Menu Panel----*/
+#headerbodyPanCadastro{ width:686px; height:246px; position:absolute; top:42px; left:46px; background:#FEFDF1; color:#fff; border-bottom:1px solid #CDCAA3; border-top:1px solid #CDCAA3;}
+#headerbodyPanCadastro h2{ position:absolute; top:10px; left:220px; background:#FEFDF1; color:#000; }
+#headerbodyPanCadastro table{ position:absolute; top:42px; left:50px; background:#FEFDF1; color:#000; }
+
+/*----Header Middle Panel----*/
+#headerrightPanCadastro{width:46px; height:290px; float:left; background:url(#{resource['images/rightfolder290.gif']}) 0 0 no-repeat;}
+/*----HEADER- PANEL----*/
+
+
+/*----- HEADER PANEL CADASTRO ------*/
+
+
+#agenda h2{background:#F2F0DC; color:#D80000; font:26px/54px "Trebuchet MS",Arial, Helvetica, sans-serif;}
+
+/*----BODY PANEL----*/
+#bodyPan{width:686px; height: 500px; position:relative; margin:0 auto; overflow: auto;}
+#bodyPan h2{width:300px;  height:54px; background:#F2F0DC; color:#D80000; font:26px/54px "Trebuchet MS",Arial, Helvetica, sans-serif;}
+
+#bodyPan p{padding:10px 0 0;}
+#bodyPan p span{font-weight:bold;}
+#bodyPan p.titulo{width:520px; color:#000; font-size:20px; padding:0px;}
+#bodyPan li.textarea textarea{width:280px; height:20px; background:#FEFEF6; color:#000; font-size:14px; line-height:20px; padding:0px;}
+
+#bodyPan li.titulo{width:520px; color:#000; font-size:20px; padding:0px; line-height:150%;}
+#bodyPan li.date{width:280px; height:20px; background:#FEFEF6; color:#000; font-size:14px; line-height:20px; padding:0px;}
+#bodyPan p.date{width:280px; height:20px; background:#FEFEF6; color:#000; font-size:14px; line-height:20px; padding:0px;}
+#bodyPan p.border{background:url(#{resource['images/dot-line.gif']}) 0 0 repeat-x; height:1px; padding:0 0 14px 0;}
+
+
+#bodyPan ul.descEvento{width:260px; height:200px; position:absolute; top:75px; left:420px; border:0}
+#bodyPan ul.nomeEvento{width:260px; height:50px; position:absolute; top:55px; left:420px; border:0}
+
+
+/*----Body Bottom Panel----*/
+#bodybottomPan{width:778px; position:relative; margin:0 auto; padding:30px 0 0 8px;}
+/*----Bottom Left Panel----*/
+#bottomleftPan{width:375px; float:left; background:url(#{resource['images/bodybottombg.gif']}) 0 0 no-repeat #FEFDF0; color:#D80000; border-bottom:1px solid #CDCAA3; border-left:1px solid #CDCAA3; border-right:1px solid #CDCAA3; margin:0px;}
+#bottomleftPan h2{width:250px; height:58px; background:url(#{resource['images/icon1.jpg']}) 0 0 no-repeat; font:26px/26px "Trebuchet MS",Arial, Helvetica, sans-serif; padding:0 0 0 65px; margin:22px 0 0 41px;}
+#bottomleftPan h2 span{font-size:20px; background:#FCFBED; color:#5D5B46;}
+
+#bottomleftPan ul{width:290px; margin:15px 0 0 50px;}
+#bottomleftPan ul li{width:290px; height:30px; background:url(#{resource['images/bullet1.gif']}) 0 0 no-repeat;} 
+#bottomleftPan ul li a{width:210px; height:30px; display:block; background:url(#{resource['images/bullet1.gif']}) 0 10px no-repeat #FEFDF1; color:#2F2A28; font-size:14px; line-height:30px; text-decoration:none; padding:0 0 0 80px;}
+#bottomleftPan ul li a:hover{display:block;background:url(#{resource['images/bullet1.gif']}) 0 10px no-repeat #FEFDF1; color:#2F2A28; line-height:30px;} 
+ 
+#bottomleftPan p.more{width:270px; height:21px; padding:0px; margin:10px 0 25px 50px;} 
+#bottomleftPan p.more a{width:270px; height:21px; display:block; background:url(#{resource['images/bottom-more-bg.gif']}) 0 0 no-repeat #FEFDF1; color:#fff; font:13px/20px "Trebuchet MS",Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; text-decoration:none;} 
+#bottomleftPan p.more a:hover{background:url(#{resource['images/bottom-more-bg.gif']}) 0 0 no-repeat #FEFDF1; color:#FDF6B6; text-decoration:none;} 
+/*----/Bottom Left Panel----*/
+
+/*----Bottom Right Panel----*/
+#bottomrightPan{width:375px; float:left; background:url(#{resource['images/bodybottombg.gif']}) 0 0 no-repeat #FEFDF0; color:#D80000; border-bottom:1px solid #CDCAA3; border-left:1px solid #CDCAA3; border-right:1px solid #CDCAA3; margin:0 0 0 8px;}
+#bottomrightPan h2{width:250px; height:58px; background:url(#{resource['images/icon2.jpg']}) 0 0 no-repeat; font:26px/26px "Trebuchet MS",Arial, Helvetica, sans-serif; padding:0 0 0 65px; margin:22px 0 0 41px;}
+#bottomrightPan h2 span{font-size:20px; background:#FCFBED; color:#5D5B46;}
+
+#bottomrightPan ul{width:290px; margin:15px 0 0 50px;}
+#bottomrightPan ul li{width:290px; height:30px; background:url(#{resource['images/bullet1.gif']}) 0 0 no-repeat;} 
+#bottomrightPan ul li a{width:210px; height:30px; display:block; background:url(#{resource['images/bullet1.gif']}) 0 10px no-repeat #FEFDF1; color:#2F2A28; font-size:14px; line-height:30px; text-decoration:none; padding:0 0 0 80px;}
+#bottomrightPan ul li a:hover{display:block;background:url(#{resource['images/bullet1.gif']}) 0 10px no-repeat #FEFDF1; color:#2F2A28; line-height:30px;} 
+ 
+#bottomrightPan p.more{width:270px; height:21px; padding:0px; margin:10px 0 25px 50px;} 
+#bottomrightPan p.more a{width:270px; height:21px; display:block; background:url(#{resource['images/bottom-more-bg.gif']}) 0 0 no-repeat #FEFDF1; color:#fff; font:13px/20px "Trebuchet MS",Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; text-decoration:none;} 
+#bottomrightPan p.more a:hover{background:url(#{resource['images/bottom-more-bg.gif']}) 0 0 no-repeat #FEFDF1; color:#FDF6B6; text-decoration:none;} 
+/*----/Bottom Left Panel----*/
+
+/*----FOOTER PANEL----*/
+#footermainPan{height:60px; background:url(#{resource['images/footerbg.gif']}) 0 0 repeat-x #3B3B3B; color:#fff; font:13px/20px "Trebuchet MS",Arial, Helvetica, sans-serif; position:relative; margin:0 auto; clear:both; padding:75px 0 0;}
+
+#footerPan{width:700px; position:relative; margin:0 auto;}
+
+#footerPan ul{width:320px; height:20px; position:relative; margin:0 auto;}
+#footerPan li{float:left; }
+#footerPan ul li a{padding:0 10px 0; color:#fff; background:#3B3B3B; text-decoration:none; font-size:12px;}
+#footerPan ul li a:hover{text-decoration:underline;}
+
+#footerPan p.copyright{width:175px; position:relative; margin:0 auto; background:#3B3B3B; color:#fff;  font-size:11px;}
+
+#footerPanhtml{width:70px; height:24px; display:block; position:absolute; top:45px; left:265px;}
+#footerPanhtml a{width:66px; height:24px; display:block; background:url(#{resource['images/html-bg-normal.gif']}) 0 0 no-repeat #3B3B3B; color:#fff; font-size:14px; line-height:24px; font-weight:bold; text-decoration:none;text-transform:uppercase; padding:0 0 0 4px;}
+#footerPanhtml a:hover{background:url(#{resource['images/html-bg-hover.gif']}) 0 0 no-repeat #3B3B3B; color:#fff;}
+#footerPancss{width:58px; height:24px; display:block; position:absolute; top:45px; left:340px;}
+#footerPancss a{width:58px; height:24px; display:block; background:url(#{resource['images/css-bg-normal.gif']}) 0 0 no-repeat #3B3B3B; color:#fff; font-size:14px; line-height:24px; font-weight:bold; text-decoration:none; text-transform:uppercase; padding:0 0 0 8px;}
+#footerPancss a:hover{background:url(#{resource['images/css-bg-hover.gif']}) 0 0 no-repeat #3B3B3B; color:#fff; text-decoration:none;}
+/*----/FOOTER PANEL----*/
+
