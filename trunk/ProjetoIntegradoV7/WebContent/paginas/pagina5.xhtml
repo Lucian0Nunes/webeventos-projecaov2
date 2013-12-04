@@ -1,0 +1,38 @@
+<ui:composition template="../main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="conteudo_agenda">
+
+
+		<div id="agenda">
+			<h2>Dúvidas ??</h2>
+		</div>
+		<ul>
+			<li class="titulo">
+				E-mail: webeventos@gmail.com			
+			</li>
+			
+			<li class="titulo">
+				Sugestões:
+			</li>
+			<h:form>
+			<h:inputTextarea cols="82" rows="10" styleClass="textarea"/>	
+			<h:commandButton value="Enviar" actionListener="#{navegador.enviaSugestao}">
+				<f:ajax execute="@form" render="@form" />
+			</h:commandButton>
+			<h:commandButton value="Limpar" actionListener="#{navegador.limparCamposSugestao}">
+				<f:ajax execute="@form" render="@form" />
+			</h:commandButton>
+			</h:form>	
+		
+		</ul>
+		
+		
+		
+
+	</ui:define>
+
+</ui:composition>

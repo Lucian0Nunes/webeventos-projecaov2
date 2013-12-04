@@ -1,0 +1,84 @@
+<ui:composition template="../main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="conteudo_headerpan">
+	
+		<div id="headerPanCadastro">
+			<div id="headerleftPanCadastro">
+				<h:graphicImage library="images" name="blank.gif" alt="" width="1" height="1" />
+			</div>
+			<div id="headermiddlePanCadastro">
+				<div id="menuPanCadastro">
+				<f:view>
+					<h:form>
+						<ul>
+							<ui:repeat value="#{navegador.items}" var="item">
+							<li>
+								<h:commandLink action="#{item.click}" value="#{item.nome}">
+									<f:ajax execute="@form" render=":form_agenda" />
+								</h:commandLink>
+							</li>											
+							</ui:repeat>
+						</ul>	
+					</h:form>
+				</f:view>
+				</div>
+				<h:form id="cont_logo">
+				<ui:insert name="conteudo_logo">
+					<div id="headerbodyPanCadastro">
+							<div id="headerleftredPanCadastro">
+							
+								<h2>Inscrição no Evento </h2>
+									<h:panelGrid columns="3">
+									
+										<h:outputLabel value="Nome:" style="color:black;"/>
+										<h:inputText id="c_nome" size="50" required="true" value="#{controleUsuarios.usuario.nome}"  requiredMessage="Obrigatório"/>
+										<h:message for="c_nome" style="color:red;"/>
+									
+										<h:outputLabel value="E-Mail:" style="color:black;" />
+										<h:inputText id="c_mail" size="50" required="true" value="#{controleUsuarios.usuario.email}"  requiredMessage="Obrigatório"/>
+										<h:message for="c_mail" style="color:red;"/>
+
+										<h:outputLabel value="CPF:" style="color:black;" />
+										<h:inputText id="c_cpf" required="true" value="#{controleUsuarios.usuario.cpf}"  requiredMessage="Obrigatório" />
+										<h:message for="c_cpf" style="color:red; "/>
+
+										<h:outputLabel value="Login:" style="color:black;" />
+										<h:inputText  id="c_login" required="true" value="#{controleUsuarios.usuario.login}"  requiredMessage="Obrigatório"/>
+										<h:message for="c_login" style="color:red;font:8px;"/>
+
+										<h:outputLabel value="Senha:" style="color:black;" />
+										<h:panelGroup>
+											<h:inputSecret required="true" value="#{controleUsuarios.usuario.senha}"  requiredMessage="Obrigatório"/>
+											<h:outputLabel value="Confirma:" style="color:black;" />
+											<h:inputSecret id="c_senha" required="true" value="#{controleUsuarios.usuario.senha}"  requiredMessage="Obrigatório"/>
+										</h:panelGroup>
+										<h:message for="c_senha" style="color:red;"/>
+
+										<h:outputLabel value="Instituição:" style="color:black; " />
+										<h:inputText  value="#{controleUsuarios.usuario.instituicao}" />
+										<h:outputLabel value="" />
+										
+										
+										<h:commandButton value="Cadastrar" type="submit" action="#{controleUsuarios.adiciona}">
+											<f:ajax execute="@form" render=":cont_logo" />
+										</h:commandButton>
+											<h:commandButton value="Sair" actionListener="#{controleUsuarios.prepararAdicionarParticipante}"/>
+											<h:commandButton value="Limpar" type="reset"/>
+									</h:panelGrid>
+							</div>
+						</div>
+				</ui:insert>
+				</h:form>
+			</div>
+			<div id="headerrightPanCadastro">
+				<h:graphicImage library="images" name="blank.gif" alt="" width="1" height="1" />
+			</div>
+		</div>
+	</ui:define>
+	
+	
+</ui:composition>

@@ -1,0 +1,39 @@
+<ui:composition template="mainadm.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="conteudo_agenda">
+
+		<div id="agenda">
+			<h2>Controle Usuários</h2>
+		</div>
+
+		<h:panelGroup rendered="#{not empty agendaDeEventos.agenda}">
+
+			<h:dataTable value="#{controleUsuarios.usuarios}" var="lst">
+
+				<h:column>
+					<p class="titulo">#{lst.nome}</p>
+					<p>#{lst.email}</p>
+					<br />
+					<h:commandLink value="Alterar" style="padding: 1em;"/>
+					<h:commandLink value="Excluir" style="padding: 1em;"/>
+					<h:commandLink value="Enviar Confirmação" style="padding: 1em;"/>
+					<h:commandLink value="Nivel de Acesso" style="padding: 1em;"/>
+					<p class="border">
+						<h:graphicImage library="images" name="blank.gif" alt="" width="1" height="1" />
+					</p>
+
+
+				</h:column>
+
+			</h:dataTable>
+		</h:panelGroup>
+
+
+
+	</ui:define>
+
+</ui:composition>
