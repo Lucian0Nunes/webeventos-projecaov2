@@ -44,15 +44,13 @@
 
 			<h:panelGroup rendered="#{not empty navegador.validaLogin}">
 				<h:form>
-					<ul>
-						<h:messages styleClass="message" />
-					</ul>
 					<ul class="logado">
 						<li>#{sessionScope.usuario}!</li>
 					</ul>
 
 					<ul>
-						<li class="buttonlogado"><h:commandLink value="sair" action="#{navegador.registraSaida}">
+						<li class="buttonlogado">
+							<h:commandLink value="sair" action="#{navegador.registraSaida}">
 								<f:ajax execute="@form" render="@form"/>
 							</h:commandLink>
 						</li>
@@ -60,21 +58,18 @@
 				</h:form>
 			</h:panelGroup>
 
-
-
-
 		</ui:insert>
-		<h:graphicImage library="images" name="logo_faculdade.png"
-			alt="WebEventos Projeção" class="logo" title="WebEventos Projeção" />
+		<h:graphicImage library="images" name="logo_faculdade.png"	alt="WebEventos Projeção" class="logo" title="WebEventos Projeção" />
 
 	</div>
-
+	<h:messages styleClass="message" />
 	<ui:insert name="conteudo_headerpan">
 		<div id="headerPan">
 			<div id="headerleftPan">
 				<h:graphicImage library="images" name="blank.gif" alt="" width="1" height="1" />
 			</div>
 			<div id="headermiddlePan">
+				
 				<div id="menuPan">
 				<f:view>
 					<h:form>
@@ -111,7 +106,7 @@
 	<h:form id="form_agenda">
 		<ui:insert name="conteudo_agenda">
 		<div id="agenda">
-			<h2>Agenda:</h2>
+			<h2>Programação:</h2>
 		</div>
 		<h:panelGroup rendered="#{not empty agendaDeEventos.agenda}">
 
@@ -119,7 +114,7 @@
 
 				<h:column>
 					<p class="titulo">#{lista.titulo}</p>
-					<p class="date">No dia 31 de Novembro 2013 as 16:59hs</p>
+					<p class="date">#{lista.horarioFormatado}</p>
 					<p>#{lista.descricao}</p>
 					<br />
 					<p class="border">

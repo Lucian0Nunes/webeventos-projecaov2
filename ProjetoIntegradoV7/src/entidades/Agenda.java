@@ -2,6 +2,7 @@ package entidades;
 
 import interfaces.InterfaceDeAcessoAoBanco;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
@@ -44,6 +45,14 @@ public class Agenda implements InterfaceDeAcessoAoBanco{
 	public Calendar getHorario() {
 		return horario;
 	}
+	
+	public String getHorarioFormatado(){
+		SimpleDateFormat sd = new SimpleDateFormat("MMMM,EEEE, dd,MM,yyyy,HH,mm,ss");
+		String[] splitString = sd.format(horario.getTime()).split(",");
+		String formatado = "Dia "+splitString[3]+" de "+splitString[0]+" "+splitString[4]+" às "+splitString[5]+":"+splitString[6]+"hs";
+		return formatado;
+	}
+	
 	public void setHorario(Calendar horario) {
 		this.horario = horario;
 	}

@@ -23,6 +23,7 @@ public class EventoDao {
 	public void adiciona(Evento evento){
 		try {
 			manager.getTransaction().begin();
+			evento.setQtd_vagas_restantes(evento.getQtd_vagas());
 			this.manager.persist(evento);
 			manager.getTransaction().commit();
 		} catch (Exception e) {
@@ -67,8 +68,6 @@ public class EventoDao {
 			manager.getTransaction().commit();
 		} catch (Exception e) {
 			manager.getTransaction().rollback();
-		}finally{
-			manager.close();
 		}
 		return evento;
 	}
@@ -81,6 +80,19 @@ public class EventoDao {
 		}		
 	}
 	
+	
+	public void atualiza2(Evento evento){
+		try {
+			manager.getTransaction().begin();
+			this.manager.merge(evento);
+			manager.getTransaction().commit();
+		} catch (Exception e) {
+			manager.getTransaction().rollback();
+		}finally{
+			manager.close();
+		}
+	}
+	
 	@SuppressWarnings("unchecked")
 	public List<Evento> getLista(){
 		Query query = this.manager.createQuery("SELECT x FROM Evento x");
@@ -88,7 +100,7 @@ public class EventoDao {
 	}
 	
 	public boolean qtdVagasDisponiveis(){
-		Query query = this.manager.createQuery("SELECT x.qtd_vagas FROM Evento x");
+		Query query = this.manager.createQuery("SELECT x.qtd_vagas_reserva FROM Evento x");
 		int qtd = (Integer) query.getSingleResult();
 		if(qtd > 0){
 			return true;
@@ -106,7 +118,7 @@ public class EventoDao {
 	
 	public void designaVaga(){
 		Evento evento = procura(1l);
-		evento.setQtd_vagas((evento.getQtd_vagas() -1));
+		evento.setQtd_vagas_restantes((evento.getQtd_vagas_restantes() -1));
 		atualiza(evento);
 	}
 	

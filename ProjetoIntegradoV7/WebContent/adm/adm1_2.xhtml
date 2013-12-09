@@ -1,0 +1,62 @@
+<ui:composition template="mainadm.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="conteudo_agenda">
+
+		<div id="agenda">
+			<h2>Registro do Evento</h2>
+		</div>
+
+	<h:form>
+		<h:panelGrid columns="2" border="0" rendered="#{empty navegador.validaLogin}" columnClasses="col1,col2">
+
+			<h:panelGrid columns="1">
+				<h:outputLabel value="Data Inicial:" styleClass="rightAlign"/>
+				<h:outputLabel value="Data Final:" />
+				<h:outputLabel value="Nome do Evento:" />
+				<h:outputLabel value="Descrição do Evento:" />
+				<h:outputLabel value="Qtd. Vagas:"  />
+				<h:outputLabel value="Dias Float:"  />
+				<h:outputLabel value="Seg. Chamada:" />
+				<h:outputLabel value="Endereço" />
+			
+			
+			</h:panelGrid>
+
+			<h:panelGrid columns="1">
+				<p:calendar size="7" value="#{controleDeEvento.evento.data_inicio}" pattern="dd/MM/yyyy"/>
+				<p:calendar size="7" value="#{controleDeEvento.evento.data_termino}" pattern="dd/MM/yyyy"/>
+				<h:inputText size="66" value="#{controleDeEvento.evento.nome}"/>
+				<h:inputTextarea rows="5" cols="50" value="#{controleDeEvento.evento.descricaoEvento}"/>
+				<h:inputText  value="#{controleDeEvento.evento.qtd_vagas}"/>
+				<h:inputText value="#{controleDeEvento.evento.dias_float}"/>
+				<h:inputText value="#{controleDeEvento.evento.dias_segunda_chamada}"/>
+				<h:inputTextarea rows="3" cols="50" value="#{controleDeEvento.evento.endereco_evento}"/>
+			
+			
+			
+				<h:commandButton value="Alterar " />
+				<h:commandButton value="Limpar" />
+			
+			
+			</h:panelGrid>
+				
+		</h:panelGrid>
+
+
+
+
+		</h:form>
+
+
+
+
+
+
+	</ui:define>
+
+</ui:composition>

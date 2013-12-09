@@ -28,8 +28,8 @@ public class ControleDeUsuarios {
 			fc.addMessage(null, fm);
 			return "/main";
 		}else{
-			FacesMessage fm = new FacesMessage("Erro de Usuário/Senha, valide seus dados.");
-			fm.setSeverity(FacesMessage.SEVERITY_ERROR);
+			FacesMessage fm = new FacesMessage("Usuário já cadastrado na base., valide seus dados.");
+			fm.setSeverity(FacesMessage.SEVERITY_INFO);
 			fc.addMessage(null, fm);
 			return "/paginas/pagina6";
 		}

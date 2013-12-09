@@ -6,12 +6,12 @@
 
 	<ui:define name="conteudo_agenda">
 
-		<div id="agenda">
-			<h2>Suporte</h2>
-		</div>
-
-		Em construção
-
+		<h3>Deseja enviar e-mail de confirmação para todos os Participantes Cadastrados ?</h3>
+		<h3>Participantes do Cadastro reserva não estão incluidos nessa operação</h3>
+		<h:outputText value="" style="padding-left:15em;"/>
+		<h:commandButton value="Enviar" action="#{controleDeEvento.getEnviarEmailDeConfirmacao}" />
+		<h:outputText value="" style="padding-left:5em;"/>
+		<h:commandButton value="Sair" action="#{controleDeEvento.getMainAdm}"/>
 	</ui:define>
 
 </ui:composition>

@@ -25,11 +25,11 @@ public class Navegador {
 	@SuppressWarnings("serial")
 	private List<Distribuidor> items = new ArrayList<Distribuidor>(){
 		{
-			add(new Distribuidor("Inicio",  "/paginas/pagina1"));
+			add(new Distribuidor("Inicio",  "/main"));
 			add(new Distribuidor("Sobre",   "/paginas/pagina2"));
-			add(new Distribuidor("Serviço", "/paginas/pagina3"));
 			add(new Distribuidor("Localização", "/paginas/pagina4"));
 			add(new Distribuidor("Suporte", "/paginas/pagina5"));
+			add(new Distribuidor("Serviço", "/paginas/pagina3"));
 
 		};
 	};
@@ -38,11 +38,11 @@ public class Navegador {
 	@SuppressWarnings("serial")
 	private List<Distribuidor> itemsAdm = new ArrayList<Distribuidor>(){
 		{
-			add(new Distribuidor("Resumo",  "/adm/adm1"));
-			add(new Distribuidor("Agenda",   "/adm/adm2"));
-			add(new Distribuidor("Usuarios", "/adm/adm3"));
-			add(new Distribuidor("Relatorios", "/adm/adm4"));
-			add(new Distribuidor("Suporte", "/adm/adm5"));
+			add(new Distribuidor("Resumo",  "/adm/adm10"));
+			add(new Distribuidor("Programação",   "/adm/adm2"));
+			add(new Distribuidor("Usuários", "/adm/adm3"));
+			add(new Distribuidor("Relatorios", "/adm/adm6"));
+			add(new Distribuidor("Suporte", "/adm/adm7"));
 
 		};
 	};
@@ -90,26 +90,25 @@ public class Navegador {
 			UsuarioFacade f = new UsuarioFacade();
 			retorno = f.validaLogin(nome, senha);
 		}
+		
+		if(retorno == null){
+			FacesMessage fm = new FacesMessage("Credenciais inválidas.");
+			fm.setSeverity(FacesMessage.SEVERITY_ERROR);
+			fc.addMessage(null, fm);
+			return "/paginas/pagina7";
+		}		
+		
 		if (retorno[1].equals("1")) {
 
-			if (retorno.length > 0) {
-				ExternalContext ec = fc.getExternalContext();
-				HttpSession session = (HttpSession) ec.getSession(false);
-				session.setAttribute("usuario", retorno[0]);
-				return "/main";
-
-			} else {
-				FacesMessage fm = new FacesMessage("Credenciais inválidas.");
-				fm.setSeverity(FacesMessage.SEVERITY_ERROR);
-				fc.addMessage(null, fm);
-				setSessaovalida(0);
-				return "/paginas/pagina7";
-			}
+			ExternalContext ec = fc.getExternalContext();
+			HttpSession session = (HttpSession) ec.getSession(false);
+			session.setAttribute("usuario", retorno[0]);
+			return "/main";
 		}else{
 			ExternalContext ec = fc.getExternalContext();
 			HttpSession session = (HttpSession) ec.getSession(false);
 			session.setAttribute("usuario", retorno[0]);
-			return "/adm/mainadm";
+			return "/adm/adm10";
 			
 		}
 	}
@@ -137,7 +136,6 @@ public class Navegador {
 		ExternalContext ec = fc.getExternalContext();
 		HttpSession session = (HttpSession) ec.getSession(false);
 		session.removeAttribute("usuario");
-		
 		return "/main";
 		
 	}
