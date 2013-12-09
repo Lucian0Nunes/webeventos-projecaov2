@@ -4,23 +4,25 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-	<ui:define name="conteudo_agenda">
+
+	<ui:define name="ponto_flutuante">
+	<h:form>
 		<h:commandLink value="ADICIONAR"/>
-		<div id="agenda">
-			<h2>Resumo do Evento </h2>
-		</div>
-		
+		</h:form>
+	</ui:define>
+	
+	<ui:define name="conteudo_agenda">
 			<h:panelGroup rendered="#{not empty agendaDeEventos.agenda}">
 
 			<h:dataTable value="#{agendaDeEventos.agenda}" var="lista">
 
 				<h:column>
 					<p class="titulo">#{lista.titulo}</p>
-					<p class="date">No dia 31 de Novembro 2013 as 16:59hs</p>
+					<p class="date">#{lista.horarioFormatado}</p>
 					<p>#{lista.descricao}</p>
 					<br />
-					<h:commandLink value="Alterar" style="padding: 1em;"/>
-					<h:commandLink value="Remover" style="padding: 1em;"/>
+					<h:commandLink value="Alterar" />
+					<h:commandLink value="Remover" />
 					<p class="border">
 						<h:graphicImage library="images" name="blank.gif" alt="" width="1" height="1" />
 					</p>

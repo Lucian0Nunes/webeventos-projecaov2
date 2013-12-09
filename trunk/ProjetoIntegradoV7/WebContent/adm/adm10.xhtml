@@ -1,53 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
-
-<h:head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Web_Eventos_Projecao</title>
-</h:head>
-
-<body>
-	<h:outputStylesheet library="css" name="style.css" />
-	<h:outputScript library="js" name="fix_ajax.js" target="head" />
-
-	<div id="topPan">
-
-		<ui:insert name="conteudo_aba_superior">
-			<h:panelGroup rendered="#{not empty navegador.validaLogin}">
-				<h:form>
-					<ul>
-						<h:messages styleClass="message" />
-					</ul>
-					<ul class="logado">
-						<li>#{sessionScope.usuario}!</li>
-					</ul>
-
-					<ul>
-						<li class="buttonlogado">
-						    <h:commandLink value="sair" action="#{navegador.registraSaida}">
-								<f:ajax execute="@form" render="@form"/>
-							</h:commandLink>
-						</li>
-					</ul>
-				</h:form>
-			</h:panelGroup>
-		</ui:insert>		
-		
-		<h:graphicImage library="images" name="logo_faculdade.png" alt="WebEventos Projeção" class="logo" title="WebEventos Projeção" />
-
-	</div>
-
-	<ui:insert name="conteudo_headerpan">
+<ui:composition template="../main.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">	
+	
+	<ui:define name="conteudo_headerpan">
 		<div id="headerPan">
 			<div id="headerleftPan">
 				<h:graphicImage library="images" name="blank.gif" alt="" width="1" height="1" />
 			</div>
 			<div id="headermiddlePan">
+				
 				<div id="menuPan">
 				<f:view>
 					<h:form>
@@ -55,7 +19,7 @@
 							<ui:repeat value="#{navegador.itemsAdm}" var="item">
 							<li>
 								<h:commandLink action="#{item.click}" value="#{item.nome}">
-									<f:ajax execute="@form" render="@form" />
+									<f:ajax execute="@form" render=":form_agenda" />
 								</h:commandLink>
 							</li>											
 							</ui:repeat>
@@ -63,30 +27,26 @@
 					</h:form>
 				</f:view>
 				</div>
-				
-				<div id="headerbodyPan">
-					<div id="headerleftredPan">
-						<h:graphicImage library="images" name="evento.png" alt="" id="contlogo"/>
+				<h:form id="cont_logo">
+				<ui:insert name="conteudo_logo">
+					<div id="headerbodyPan">
+						<div id="headerleftredPan">
+							<h:graphicImage library="images" name="evento.png" alt="" id="contlogo"/>
+						</div>
 					</div>
-				</div>				
-				
+				</ui:insert>
+				</h:form>
 			</div>
-			
 			<div id="headerrightPan">
 				<h:graphicImage library="images" name="blank.gif" alt="" width="1" height="1" />
 			</div>
 		</div>
-	</ui:insert>
+	</ui:define>
 	
-	<div id="pontoFlutuante">
-		<ui:insert name="ponto_flutuante"/>
-	</div>
-
-
-	<div id="bodyPan">
-
-	<h:form id="form_agenda">
-		<ui:insert name="conteudo_agenda">
+	
+	
+	
+	<ui:define name="conteudo_agenda">
 		<div id="agenda">
 			<h2>Resumo do Evento </h2>
 		</div>
@@ -151,34 +111,6 @@
 		</h:form>
 
 
-
-		</ui:insert>
-	</h:form>
-	</div>
-	
-	
-	<div id="footermainPan">
-		<div id="footerPan">
-			<ui:insert name="conteudo_rodape">
-			<ul>
-				<f:view>
-					<h:form>
-						<ul>
-							<ui:repeat value="#{navegador.itemsAdm}" var="item">
-							<li>
-								<h:commandLink action="#{item.click}" value="#{item.nome}">
-									<f:ajax execute="@form" render=":form_agenda" />
-								</h:commandLink>
-							</li>											
-							</ui:repeat>
-						</ul>	
-					</h:form>
-				</f:view>				
-			</ul>
-			</ui:insert>
-			<p class="copyright">WebEventos - Faculdade Projeção</p>
-		</div>
-	</div>	
-	
-</body>
-</html>
+		</ui:define>
+		
+</ui:composition>

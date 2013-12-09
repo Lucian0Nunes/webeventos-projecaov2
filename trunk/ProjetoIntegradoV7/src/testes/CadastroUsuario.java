@@ -22,7 +22,7 @@ public class CadastroUsuario {
 		Usuario usuario = new Usuario();
 		usuario.setNome("Luciano Nunes");
 		usuario.setCpf("829.077.751-16");
-		usuario.setEmail("wesley.fernandes.araujo@gmail.com");
+		usuario.setEmail("wesley.fernandes.arasujo@gmail.com");
 		usuario.setLogin("luciano");
 		usuario.setSenha("123");
 

@@ -43,6 +43,8 @@ ul{list-style-type:none;}
 #topPan ul.message li{width:500px; height:20px;}
 
 
+
+
 #topPan p.callus{width:119px; height:25px; background:url(#{resource['images/callus-bg.gif']}) 0 0 no-repeat #212121; color:#fff; position:absolute; top:53px; right:115px; line-height:24px; text-align:center;}
 #topPan p.phone{width:130px; height:25px; background:#212121; color:#EAE8CD; position:absolute; top:83px; right:109px; font-size:20px; line-height:25px; text-align:center;}
 
@@ -53,6 +55,9 @@ ul{list-style-type:none;}
 #headerleftPan{width:46px; height:228px; float:left; background:url(#{resource['images/leftfolder.gif']}) 0 0 no-repeat;}
 /*----Header Middle Panel----*/
 #headermiddlePan{width:686px; height:228px; float:left;}
+
+ul.message{width:570px; height:30px; position:absolute; top:120px; left:400px; border:0 ;font:18px/22px Arial, Helvetica, sans-serif; text-decoration:none;font-weight: bold; color:red; font-style: oblique;}
+ul.message li{width:570px; height:20px;}
 
 /*----Menu Panel----*/
 #menuPan{width:686px; height:33px; background:url(#{resource['images/menu-bg.gif']}) 0 0 repeat-x; position:relative; margin:0 auto;}
@@ -112,6 +117,39 @@ ul{list-style-type:none;}
 /*----- HEADER PANEL CADASTRO ------*/
 
 
+/*----- HEADER PANEL CADASTRO ------*/
+
+#headerPanChart{width:778px; height:400px; position:relative; margin:0 auto;}
+#headerleftPanChart{width:46px; height:400px; float:left; background:url(#{resource['images/leftfolder400.gif']}) 0 0 no-repeat;}
+/*----Header Middle Panel----*/
+#headermiddlePanChart{width:686px; height:400px; float:left;}
+
+/*----Menu Panel----*/
+#menuPanChart{width:686px; height:33px; background:url(#{resource['images/menu-bg.gif']}) 0 0 repeat-x; position:relative; margin:0 auto;}
+#menuPanChart ul{width:660px; height:28px; position:absolute; top:2px; left:50px;}
+#menuPanChart ul li{width:110px; height:28px; float:left;}
+#menuPanChart ul li a{width:109px; height:28px; display:block; background:#fff; color:#2F2A28; border-right:1px dashed #969260; font:13px/28px Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; text-decoration:none;}
+#menuPanChart ul li a:hover{width:110px; height:28px; background:#2F2A28; color:#fff; border:none; text-decoration:none;}
+
+#menuPanChart ul li.home{width:110px; height:28px; background:#2F2A28; color:#fff; font:13px/28px Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; border:none; text-decoration:none;}
+
+#menuPanChart ul li.contact a{width:110px; height:28px; display:block; background:#fff; color:#2F2A28; border:none; font:13px/28px Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; text-decoration:none;}
+#menuPanChart ul li.contact a:hover{width:110px; height:28px; background:#2F2A28; color:#fff; border:none; text-decoration:none;}
+
+/*----/Menu Panel----*/
+#headerbodyPanChart{ width:686px; height:356px; position:absolute; top:42px; left:46px; background:#FEFDF1; color:#fff; border-bottom:1px solid #CDCAA3; border-top:1px solid #CDCAA3;}
+#headerbodyPanChart h2{ position:absolute; top:10px; left:220px; background:#FEFDF1; color:#000; }
+#headerbodyPanChart table{ position:absolute; top:42px; left:50px; background:#FEFDF1; color:#000; }
+
+/*----Header Middle Panel----*/
+#headerrightPanChart{width:46px; height:400px; float:left; background:url(#{resource['images/rightfolder400.gif']}) 0 0 no-repeat;}
+/*----HEADER- PANEL----*/
+
+
+/*----- HEADER PANEL CADASTRO ------*/
+
+
+
 #agenda h2{background:#F2F0DC; color:#D80000; font:26px/54px "Trebuchet MS",Arial, Helvetica, sans-serif;}
 
 /*----BODY PANEL----*/
@@ -125,12 +163,25 @@ ul{list-style-type:none;}
 
 #bodyPan li.titulo{width:520px; color:#000; font-size:20px; padding:0px; line-height:150%;}
 #bodyPan li.date{width:280px; height:20px; background:#FEFEF6; color:#000; font-size:14px; line-height:20px; padding:0px;}
-#bodyPan p.date{width:280px; height:20px; background:#FEFEF6; color:#000; font-size:14px; line-height:20px; padding:0px;}
+#bodyPan p.date{width:250px; height:20px; background:#FEFEF6; color:#000; font-size:14px; line-height:20px; padding:0px;}
 #bodyPan p.border{background:url(#{resource['images/dot-line.gif']}) 0 0 repeat-x; height:1px; padding:0 0 14px 0;}
 
 
 #bodyPan ul.descEvento{width:260px; height:200px; position:absolute; top:75px; left:420px; border:0}
 #bodyPan ul.nomeEvento{width:260px; height:50px; position:absolute; top:55px; left:420px; border:0}
+#bodyPan span.idresumo{width:50px; height:20px; background:#FEFEF6; color:#000; font-size:14px; line-height:20px; padding:0px;}
+
+#bodyPan table a{padding:0 10px 0; color:#000; text-decoration:none; font-size:16px; font-weight: bold;}
+#bodyPan table a:hover{text-decoration:underline;}
+
+
+#pontoFlutuante {width:686px; height: 20px; position:relative; margin:0 auto; overflow: auto;}
+#pontoFlutuante a{color:#000; text-decoration:none; font-size:16px; font-weight: bold;}
+#pontoFlutuante a:hover{text-decoration:underline;}
+
+.linkborder{text-decoration:underline;}
+.col1{text-align:right}
+.col2{text-align:left}
 
 
 /*----Body Bottom Panel----*/

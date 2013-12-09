@@ -19,16 +19,18 @@ public class ProcessoAgendado implements Job {
 	public void execute(JobExecutionContext job) throws JobExecutionException {
 
 		Calendar cal = Calendar.getInstance();
+		Calendar calEvento = Calendar.getInstance();
 		
 		try {
 			EventoDao eventoDao = new EventoDao();
 			Evento evento = eventoDao.procura(1l);
+			calEvento.setTime(evento.getData_inicio());
 			
-			if(cal.get(Calendar.DATE) == (evento.getDias_float() - evento.getData_inicio().get(Calendar.DATE) )){
+			if(cal.get(Calendar.DATE) == (evento.getDias_float() - calEvento.get(Calendar.DATE) )){
 				UsuarioDao usuarioDao = new UsuarioDao();
 				usuarioDao.enviaEmailConfirmacao();
 			}
-			if(cal.get(Calendar.DATE) == ((1 - evento.getData_inicio().get(Calendar.DATE) ))){
+			if(cal.get(Calendar.DATE) == ((1 - calEvento.get(Calendar.DATE) ))){
 				UsuarioDao usuarioDao = new UsuarioDao();
 				usuarioDao.enviaEmailCadastroReservaDiasAntesDoEvento();
 			}
@@ -37,7 +39,6 @@ public class ProcessoAgendado implements Job {
 			e.printStackTrace();
 		}
 		
-		
-		
 	}
+	
 }

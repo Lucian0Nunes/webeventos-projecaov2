@@ -1,0 +1,50 @@
+<ui:composition template="mainadm.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="conteudo_headerpan">
+	<h:messages styleClass="message" globalOnly="true" />
+		<div id="headerPanChart">
+			<div id="headerleftPanChart">
+				<h:graphicImage library="images" name="blank.gif" alt="" width="1" height="1" />
+			</div>
+			<div id="headermiddlePanChart">
+				<div id="menuPanChart">
+				<f:view>
+					<h:form>
+						<ul>
+							<ui:repeat value="#{navegador.items}" var="item">
+							<li>
+								<h:commandLink action="#{item.click}" value="#{item.nome}">
+									<f:ajax execute="@form" render=":form_agenda" />
+								</h:commandLink>
+							</li>											
+							</ui:repeat>
+						</ul>	
+					</h:form>
+				</f:view>
+				</div>
+				<h:form id="cont_logo">
+				<ui:insert name="conteudo_logo">
+					<div id="headerbodyPanChart">
+							<div id="headerleftredPanChart">
+								<p:pieChart value="#{controleDeEvento.pieModel}" legendPosition="nw" showDataLabels="true" sliceMargin="5" /> 
+								<h:commandButton value="Imprimir"/>
+							</div>
+						</div>
+				</ui:insert>
+				</h:form>
+			</div>
+			<div id="headerrightPanChart">
+				<h:graphicImage library="images" name="blank.gif" alt="" width="1" height="1" />
+			</div>
+		</div>
+	</ui:define>
+	<ui:define name="conteudo_agenda">
+	
+	</ui:define>
+	
+</ui:composition>

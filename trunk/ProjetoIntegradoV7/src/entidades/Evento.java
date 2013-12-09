@@ -1,20 +1,22 @@
 package entidades;
 
+import interfaces.InterfaceDeAcessoAoBanco;
+
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
-
-import interfaces.InterfaceDeAcessoAoBanco;
 
 @Entity
 @Table(name="Evento")
@@ -27,15 +29,18 @@ public class Evento implements InterfaceDeAcessoAoBanco{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	@Column(name="nome")
-	private String nome;
+	private String nome;	
+	@Lob
 	@Column(name="desc_evento")
 	private String descricaoEvento;
-	@Temporal(TemporalType.TIMESTAMP)
-	private Calendar data_inicio = new GregorianCalendar();
-	@Temporal(TemporalType.TIMESTAMP)
-	private Calendar data_termino = new GregorianCalendar();;
+	@Temporal(TemporalType.DATE)
+	private Date data_inicio;
+	@Temporal(TemporalType.DATE)
+	private Date data_termino;
 	@Column(name="qtd_vagas")
 	private int qtd_vagas;
+	@Column(name="qtd_vagas_restantes")
+	private int qtd_vagas_restantes;
 	@Column(name="dias_float")
 	private int dias_float;
 	@Column(name="dis_segunda_chamada")
@@ -65,18 +70,7 @@ public class Evento implements InterfaceDeAcessoAoBanco{
 	public void setDescricaoEvento(String descricaoEvento) {
 		this.descricaoEvento = descricaoEvento;
 	}
-	public Calendar getData_inicio() {
-		return data_inicio;
-	}
-	public void setData_inicio(Calendar data_inicio) {
-		this.data_inicio = data_inicio;
-	}
-	public Calendar getData_termino() {
-		return data_termino;
-	}
-	public void setData_termino(Calendar data_termino) {
-		this.data_termino = data_termino;
-	}
+
 	public int getQtd_vagas() {
 		return qtd_vagas;
 	}
@@ -108,7 +102,45 @@ public class Evento implements InterfaceDeAcessoAoBanco{
 	public String getData_fim_formatada() {
 		return sdf.format(data_termino.getTime());
 	}
+	
+	public void setData_inicio_formatada(String data_Inicio) {
+		try {
+			DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+			Date date = formatter.parse(data_Inicio);
+			this.data_inicio = date; 
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+	}
+	public void setData_fim_formatada(String data_Fim) {
+		try {
+			DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+			Date date = formatter.parse(data_Fim);
+			this.data_inicio = date; 
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 
+	}
+
+	public Date getData_inicio() {
+		return data_inicio;
+	}
+	public void setData_inicio(Date data_inicio) {
+		this.data_inicio = data_inicio;
+	}
+	public Date getData_termino() {
+		return data_termino;
+	}
+	public void setData_termino(Date data_termino) {
+		this.data_termino = data_termino;
+	}
+	public int getQtd_vagas_restantes() {
+		return qtd_vagas_restantes;
+	}
+	public void setQtd_vagas_restantes(int qtd_vagas_restantes) {
+		this.qtd_vagas_restantes = qtd_vagas_restantes;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;

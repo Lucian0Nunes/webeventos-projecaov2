@@ -2,7 +2,8 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
 
 	<ui:define name="conteudo_agenda">
 
@@ -11,42 +12,48 @@
 		</div>
 
 		<h:form>
-			<h:panelGrid columns="2" border="0" rendered="#{empty navegador.validaLogin}">
+			<h:panelGrid columns="2" border="0" rendered="#{empty navegador.validaLogin}" columnClasses="col1,col2">
 
 				<h:outputLabel value="Data Inicial:"/>
 				<h:panelGroup>
-					<h:inputText />
+					<p:calendar size="7" value="#{controleDeEvento.evento.data_inicio}" pattern="dd/MM/yyyy" />
+					
 					<h:outputLabel value="Data Final:" />
-					<h:inputText />
+					<p:calendar size="7" value="#{controleDeEvento.evento.data_termino}" pattern="dd/MM/yyyy"/>
 				</h:panelGroup>
 
 				<h:outputLabel value="Nome do Evento:" />
-				<h:inputText size="66" />
+				<h:inputText size="66" value="#{controleDeEvento.evento.nome}"/>
 
 				<h:outputLabel value="Descrição do Evento:" />
-				<h:inputTextarea rows="5" cols="50" />
+				<h:inputTextarea rows="5" cols="50" value="#{controleDeEvento.evento.descricaoEvento}"/>
 
-				<h:outputLabel value="Qtd. Vagas:" />
-				<h:inputText />
+				<h:outputLabel value="Qtd. Vagas:"  />
+				<h:inputText  value="#{controleDeEvento.evento.qtd_vagas}"/>
 
-				<h:outputLabel value="Dias Float:" />
+				<h:outputLabel value="Dias Float:"  />
 				<h:panelGroup>
-					<h:inputText />
-					<h:outputLabel value="     "/>
+					<h:inputText value="#{controleDeEvento.evento.dias_float}"/>
+					<h:outputLabel value=""/>
+					<h:outputLabel value=""/>
 					<h:outputLabel value="Seg. Chamada:" />
-					<h:inputText />
+					<h:inputText value="#{controleDeEvento.evento.dias_segunda_chamada}"/>
 				</h:panelGroup>
 
-				<h:outputLabel value="Endereço" />
-				<h:inputTextarea rows="3" cols="50" />
+				<h:outputLabel value="Endereço:" />
+				<h:inputTextarea rows="3" cols="50" value="#{controleDeEvento.evento.endereco_evento}"/>
 
 
 				<h:outputLabel/>
+				
 				<h:panelGroup>
-					<h:commandButton value="Cadastrar" />
-					<h:commandButton value="Limpar" />
-					<h:commandButton value="Limpar" />
+					<h:commandButton value="Alterar" action="#{controleDeEvento.alterarEventoCadastrado}"/>
+					<h:outputText value=" "/>
+					<h:commandButton value="Limpar" actionListener="#{controleDeEvento.prepararAdicionarEvento}">
+						<f:ajax execute="@form" render="@form" />
+					</h:commandButton>
 				</h:panelGroup>
+				
 			</h:panelGrid>
 
 

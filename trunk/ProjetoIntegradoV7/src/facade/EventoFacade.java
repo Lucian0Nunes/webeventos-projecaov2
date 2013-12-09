@@ -29,5 +29,8 @@ public class EventoFacade {
 	public void atualiza(Evento evento){
 		dao.atualiza(evento);
 	}
+	public void atualiza2(Evento evento){
+		dao.atualiza2(evento);
+	}
 
 }
